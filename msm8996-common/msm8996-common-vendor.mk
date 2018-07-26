@@ -52,6 +52,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8996-common/proprietary/etc/permissions/qti_libpermissions.xml:system/etc/permissions/qti_libpermissions.xml \
     vendor/xiaomi/msm8996-common/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
     vendor/xiaomi/msm8996-common/proprietary/etc/permissions/telephonyservice.xml:system/etc/permissions/telephonyservice.xml \
+    vendor/xiaomi/msm8996-common/proprietary/vendor/etc/permissions/vendor-qti-hardware-alarm.xml:system/etc/permissions/vendor-qti-hardware-alarm.xml \
+    vendor/xiaomi/msm8996-common/proprietary/framework/QtiTelephonyServicelibrary.jar:system/framework/QtiTelephonyServicelibrary.jar \
     vendor/xiaomi/msm8996-common/proprietary/framework/audiosphere.jar:system/framework/audiosphere.jar \
     vendor/xiaomi/msm8996-common/proprietary/etc/wfdconfig.xml:system/etc/wfdconfig.xml \
     vendor/xiaomi/msm8996-common/proprietary/etc/wfdconfigsink.xml:system/etc/wfdconfigsink.xml \
@@ -161,7 +163,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/android.hardware.drm@1.0-service.widevine:system/vendor/bin/hw/android.hardware.drm@1.0-service.widevine \
     vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:system/vendor/bin/hw/vendor.display.color@1.0-service \
     vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.gnss@1.0-service:system/vendor/bin/hw/vendor.qti.gnss@1.0-service \
-    vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.iop@1.0-service:system/vendor/bin/hw/vendor.qti.hardware.iop@1.0-service \
+    vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service:system/vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service \
+   vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.iop@1.0-service:system/vendor/bin/hw/vendor.qti.hardware.iop@1.0-service \
     vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.perf@1.0-service:system/vendor/bin/hw/vendor.qti.hardware.perf@1.0-service \
     vendor/xiaomi/msm8996-common/proprietary/vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti:system/vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti \
     vendor/xiaomi/msm8996-common/proprietary/vendor/bin/ims_rtp_daemon:system/vendor/bin/ims_rtp_daemon \
@@ -211,7 +214,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:system/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:system/vendor/etc/init/vendor.display.color@1.0-service.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.gnss@1.0-service.rc:system/vendor/etc/init/vendor.qti.gnss@1.0-service.rc \
-    vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc:system/vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc \
+    vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:system/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
+   vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc:system/vendor/etc/init/vendor.qti.hardware.iop@1.0-service.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc:system/vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc:system/vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/perf/perf-profile0.conf:system/vendor/etc/perf/perf-profile0.conf \
@@ -223,6 +227,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/perf/perf-profile6.conf:system/vendor/etc/perf/perf-profile6.conf \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/perf/perfboostsconfig.xml:system/vendor/etc/perf/perfboostsconfig.xml \
     vendor/xiaomi/msm8996-common/proprietary/vendor/etc/xtra_root_cert.pem:system/vendor/etc/xtra_root_cert.pem \
+    vendor/xiaomi/msm8996-common/proprietary/vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar:system/vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
     vendor/xiaomi/msm8996-common/proprietary/vendor/framework/qti-vzw-ims-internal.jar:system/vendor/framework/qti-vzw-ims-internal.jar \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so:system/vendor/lib/com.qualcomm.qti.dpm.api@1.0_vendor.so \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib/com.qualcomm.qti.imscmservice@1.0_vendor.so:system/vendor/lib/com.qualcomm.qti.imscmservice@1.0_vendor.so \
@@ -535,6 +540,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib64/hw/gatekeeper.msm8996.so:system/vendor/lib64/hw/gatekeeper.msm8996.so \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib64/hw/keystore.msm8996.so:system/vendor/lib64/hw/keystore.msm8996.so \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib64/hw/sound_trigger.primary.msm8996.so:system/vendor/lib64/hw/sound_trigger.primary.msm8996.so \
+    vendor/xiaomi/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so:system/vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so:system/vendor/lib64/hw/vendor.qti.gnss@1.0-impl.so \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so:system/vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so \
     vendor/xiaomi/msm8996-common/proprietary/vendor/lib64/hw/vulkan.msm8996.so:system/vendor/lib64/hw/vulkan.msm8996.so \
@@ -725,6 +731,7 @@ PRODUCT_PACKAGES += \
     CNEService \
     com.qualcomm.location \
     qcrilmsgtunnel \
+    PowerOffAlarm \
     TimeService \
     WfdCommon \
     QtiTelephonyServicelibrary \
